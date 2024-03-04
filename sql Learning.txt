@@ -1,0 +1,75 @@
+1. creating database
+
+=> CREATE DATABASE college;
+
+2. use college
+
+=> means you are college database.
+
+3. creating table 
+
+=> CREATE TABLE student(
+
+   id INT PRIMARY KEY,
+   name VARCHAR(50),
+   age INT NOT NULL
+);
+
+4. Insert into values in table
+
+=> INSERT INTO student VALUES(1,"dheeraj",25);
+
+5. see all values in table
+
+=> SELECT * FROM student;
+
+6. Difference between Char and Varchar.
+
+=> char(50) if we are store size less than 50 means 10 so, free space are also reserved.
+=> And in varchar(50) if we store 10 byte of length free space are released.
+
+
+Types of sql command
+
+1. DDL (data defination language)
+=> create, alter, truncate, rename, drop
+
+2. DML (data manipulation language)
+=> insert, update, delete
+
+3. DQL (data query language)
+=> SELECT
+
+4. DCL (data control language)
+=> grant and revoke permission to user.
+
+5. TCL (Transaction control language)
+=> start transaction ,commit, rollback 
+
+Database related Queries
+
+1. if we create another database 
+=> CREATE DATABASE IF NOT EXISTS Dheeraj;
+
+2. drop database 
+=> DROP DATABASE IF EXISTS Dheeraj;
+
+3. SHOW DATABASES;
+
+4. SHOW TABLES;
+
+Table Queries
+
+1. create table
+=> CREATE TABLE student(
+
+    roll no INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+2. Insert values
+=> INSERT INTO student VALUES(12,"dheeraj');
+
+
+3. show table and values
+=> SELECT * FROM student;
