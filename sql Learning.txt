@@ -73,3 +73,59 @@ Table Queries
 
 3. show table and values
 => SELECT * FROM student;
+
+
+key 
+
+1. Primary key :- it is a column (or set of column) in a table that uniquely identifies each row.
+there is only primary in an table.
+
+2. Forign key :- A forign is an column(or set of column) in a table that refers to primary key of another table.
+There is multiple forign key.
+
+constraints)
+
+1. primary key
+
+ex- id INT PRIMARY KEY
+
+2. unique
+
+ex- roll no UNIQUE
+
+3. NOT NULL
+
+ex- name VARCHAR(25) NOT NULL
+
+4. forign key
+
+ex- cust_id INT
+ FORIGN KEY(cust_id) REFERENCES (customer id)
+
+
+5. check
+
+ex- age INT CHECK (age>18 AND city="delhi")
+
+SELECT command property
+
+i) select * from student -> for all table data
+
+ii) select name, city from student;
+
+iii) select DISTINCT name from student -> for unique value means repeatedly values.
+
+
+CLAUSES
+
+1.) WHERE 
+
+SELECT * FROM student WHERE marks>90;
+
+OPERATOR 
+AND , OR , BETWEEN , IN
+
+
+SELECT * FROM student WHERE marks>85 AND city = "ballia";
+
+SELECT * FROM student WHERE marks>89 OR city = "mumbai";
