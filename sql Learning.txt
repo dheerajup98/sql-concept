@@ -116,16 +116,59 @@ ii) select name, city from student;
 iii) select DISTINCT name from student -> for unique value means repeatedly values.
 
 
+Aggregate function
+
+max()
+min()
+avg()
+count()
+sum()
+
+SELECT MAX(marks) FROM student;
+SELECT COUNT(roll no) FROM student;
+
+
 CLAUSES
 
 1.) WHERE 
 
 SELECT * FROM student WHERE marks>90;
+And they applied condition on row.
 
 OPERATOR 
-AND , OR , BETWEEN , IN
+AND , OR , BETWEEN , IN, NOT IN
 
 
 SELECT * FROM student WHERE marks>85 AND city = "ballia";
 
 SELECT * FROM student WHERE marks>89 OR city = "mumbai";
+
+SELECT * FROM student WHERE marks BETWEEN 30 AND 50;
+
+SELECT * FROM student WHERE city IN ("delhi", "ballia");
+
+SELECT * FROM student WHERE city NOT IN ("pune");
+
+2. ORDER BY 
+
+SELECT * FROM student ORDER BY city ASC;
+
+3. GROUP BY 
+
+=> it collects data from multiple records and group the result by one or more column.
+
+SELECT city, COUNT(rollno) FROM student GROUP BY city;
+
+4. HAVING
+
+=> similar to where clause but they applied on group by applied on condion on column.
+
+rules to write condition and clauses.
+
+SELECT column
+FROM table name
+WHERE condition in row
+GROUP BY column
+HAVING condition in column
+ORDER BY asc or desc
+
