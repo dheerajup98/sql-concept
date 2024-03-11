@@ -172,3 +172,32 @@ GROUP BY column
 HAVING condition in column
 ORDER BY asc or desc
 
+
+Table related Queries
+
+update
+
+by default in mysql safe mode in on so firstly off the safe mode
+=> SET SQL_SAFE_UPDATES = 0;
+
+UPDATE student
+SET grade= "A"
+WHERE marks BETWEEN 80 AND 90;
+
+Delete 
+
+=> DELETE FROM student WHERE marks <33;
+
+forign key 
+
+CREATE TABLE teacher(
+
+  id INT
+  name VARCHAR(50),
+  Dept id INT,
+  FORIGN KEY(Dept id) REFERENCES Course(id);
+  ON UPDATE CASCADE
+  ON DELETE CASCADE
+);
+
+ON UPDATE CASCADE AND ON DELTE CASCADE => whenever you update and delete in primary table or parent table so referencing table reflect already.
